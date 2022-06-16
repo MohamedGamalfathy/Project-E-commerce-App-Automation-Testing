@@ -1,4 +1,4 @@
-@regression
+@regressions
 Feature: users could  make a registration on the website to create an account
 
 Background: user go to register page

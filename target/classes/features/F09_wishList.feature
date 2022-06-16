@@ -1,4 +1,4 @@
-@regression
+@regressions
 Feature: logged user could add products to wishlist
   Background: user login first
     Given user go to login page

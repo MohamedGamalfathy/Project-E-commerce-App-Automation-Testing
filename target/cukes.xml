@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="15" time="630.911">
-<testcase classname="users could  make a registration on the website to create an account" name="User could register with valid data" time="84.709">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="172.743">
+<testcase classname="users could  make a registration on the website to create an account" name="User could register with valid data" time="96.27">
 <system-out><![CDATA[Given user go to register page..............................................passed
 When user fill your personal details field..................................passed
 And user fill company details...............................................passed
@@ -9,166 +9,23 @@ And user click on register button...........................................pass
 Then user could register successfully.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user could log in to his\her account" name="User could login with valid data" time="35.49">
+<testcase classname="logged user could add products to wishlist" name="success massage is visible after adding product to wishlist" time="37.783">
 <system-out><![CDATA[Given user go to login page.................................................passed
 When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
 And user click on login button..............................................passed
 Then user could login successfully..........................................passed
+When user add product to wishlist...........................................passed
+Then wishlist notification success is visible...............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="user could reset his\her password" name="user could reset his\her password successfully" time="29.774">
-<system-out><![CDATA[Given user open login page..................................................passed
-When user click on forget password..........................................passed
-And user write email "mohamedgamal39@gmail.com".............................passed
-And user click on recover button............................................passed
-Then user get success massage...............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="logged users will be able to search for products with different parameters" name="user could search using product name" time="33.578">
+<testcase classname="logged user could add products to wishlist" name="number of wishlist item in home page is increased" time="36.908">
 <system-out><![CDATA[Given user go to login page.................................................passed
 When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
 And user click on login button..............................................passed
 Then user could login successfully..........................................passed
-When user write product name "Apple"........................................passed
-And user click on search button.............................................passed
-Then the search has been completed successfully and get "Apple".............passed
+When user add product to wishlist...........................................passed
+When user click on wishlist link............................................passed
+Then number of wishlist items increased.....................................passed
 ]]></system-out>
-</testcase>
-<testcase classname="logged users will be able to search for products with different parameters" name="user could search using product sku" time="58.917">
-<system-out><![CDATA[Given user go to login page.................................................passed
-When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
-And user click on login button..............................................passed
-Then user could login successfully..........................................passed
-When user write product sku "AP_MBP_13".....................................passed
-And user click on search button.............................................passed
-And user select product.....................................................passed
-Then the search has been completed successfully and get sku "AP_MBP_13".....passed
-]]></system-out>
-</testcase>
-<testcase classname="logged user could switch between currencies" name="user could select currency" time="39.065">
-<system-out><![CDATA[Given user go to login page.................................................passed
-When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
-And user click on login button..............................................passed
-Then user could login successfully..........................................passed
-When user select currency...................................................passed
-Then user change currency successfully......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="logged user could hover categories and select sub category" name="user could hover categories" time="54.577">
-<system-out><![CDATA[Given user go to login page.................................................passed
-When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
-And user click on login button..............................................passed
-Then user could login successfully..........................................passed
-When user hover category and select subcategory.............................passed
-Then user could hover successfully..........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="users will be able to open sliders in home page" name="first slider is clickable on home page" time="23.956">
-<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When click on first slider..................................................passed
-Then relative product for first slider is displayed.........................failed
-
-StackTrace:
-java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at org.example.stepDefinitions.D07_slidersStepDef.first_product_details_opened(D07_slidersStepDef.java:33)
-	at ✽.relative product for first slider is displayed(file:///E:/Udacity%20Testing/Project2demonopcommerce/src/main/resources/features/F07_sliders.feature:7)
-]]></failure>
-</testcase>
-<testcase classname="users will be able to open sliders in home page" name="second slider is clickable on home page" time="20.593">
-<failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When click on second slider.................................................passed
-Then relative product for second slider is displayed........................failed
-
-StackTrace:
-java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertTrue(Assert.java:56)
-	at org.testng.Assert.assertTrue(Assert.java:66)
-	at org.example.stepDefinitions.D07_slidersStepDef.second_product_details_opened(D07_slidersStepDef.java:41)
-	at ✽.relative product for second slider is displayed(file:///E:/Udacity%20Testing/Project2demonopcommerce/src/main/resources/features/F07_sliders.feature:12)
-]]></failure>
-</testcase>
-<testcase classname="logged users could open followUs links" name="user could open facebook link" time="31.743">
-<system-out><![CDATA[Given user go to login page.................................................passed
-When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
-And user click on login button..............................................passed
-Then user could login successfully..........................................passed
-When user click on facebook icon............................................passed
-Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
-]]></system-out>
-</testcase>
-<testcase classname="logged users could open followUs links" name="user could open twitter link" time="39.193">
-<system-out><![CDATA[Given user go to login page.................................................passed
-When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
-And user click on login button..............................................passed
-Then user could login successfully..........................................passed
-When user click on twitter icon.............................................passed
-Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
-]]></system-out>
-</testcase>
-<testcase classname="logged users could open followUs links" name="user could open rss link" time="33.43">
-<failure message="expected [https://www.rss.com/user/nopCommerce] but found [https://demo.nopcommerce.com/news/rss/1]" type="java.lang.AssertionError"><![CDATA[Given user go to login page.................................................passed
-When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
-And user click on login button..............................................passed
-Then user could login successfully..........................................passed
-When user click on rss icon.................................................passed
-Then "https://www.rss.com/user/nopCommerce" is opened in new rss tab........failed
-
-StackTrace:
-java.lang.AssertionError: expected [https://www.rss.com/user/nopCommerce] but found [https://demo.nopcommerce.com/news/rss/1]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1413)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:655)
-	at org.testng.Assert.assertEquals(Assert.java:665)
-	at org.example.stepDefinitions.D08_followUsStepDef.user_open_new_rss_tab(D08_followUsStepDef.java:63)
-	at ✽."https://www.rss.com/user/nopCommerce" is opened in new rss tab(file:///E:/Udacity%20Testing/Project2demonopcommerce/src/main/resources/features/F08_followUs.feature:20)
-]]></failure>
-</testcase>
-<testcase classname="logged users could open followUs links" name="user could open youtube link" time="70.09">
-<system-out><![CDATA[Given user go to login page.................................................passed
-When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
-And user click on login button..............................................passed
-Then user could login successfully..........................................passed
-When user click on youtube icon.............................................passed
-Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
-]]></system-out>
-</testcase>
-<testcase classname="logged user could add products to wishlist" name="success massage is visible after adding product to wishlist" time="37.058">
-<failure message="Index: 2, Size: 0" type="java.lang.IndexOutOfBoundsException"><![CDATA[Given user go to login page.................................................passed
-When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
-And user click on login button..............................................passed
-Then user could login successfully..........................................passed
-When user add product to wishlist...........................................failed
-Then wishlist notification success is visible...............................skipped
-
-StackTrace:
-java.lang.IndexOutOfBoundsException: Index: 2, Size: 0
-	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
-	at java.util.ArrayList.get(ArrayList.java:435)
-	at org.example.stepDefinitions.D09_wishListStepDef.add_product_to_wishList(D09_wishListStepDef.java:21)
-	at ✽.user add product to wishlist(file:///E:/Udacity%20Testing/Project2demonopcommerce/src/main/resources/features/F09_wishList.feature:11)
-]]></failure>
-</testcase>
-<testcase classname="logged user could add products to wishlist" name="number of wishlist item in home page is increased" time="35.791">
-<failure message="Index: 2, Size: 0" type="java.lang.IndexOutOfBoundsException"><![CDATA[Given user go to login page.................................................passed
-When user enter "mohamedgamal39@gmail.com" and "012345678999"...............passed
-And user click on login button..............................................passed
-Then user could login successfully..........................................passed
-When user add product to wishlist...........................................failed
-When user click on wishlist link............................................skipped
-Then number of wishlist items increased.....................................skipped
-
-StackTrace:
-java.lang.IndexOutOfBoundsException: Index: 2, Size: 0
-	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
-	at java.util.ArrayList.get(ArrayList.java:435)
-	at org.example.stepDefinitions.D09_wishListStepDef.add_product_to_wishList(D09_wishListStepDef.java:21)
-	at ✽.user add product to wishlist(file:///E:/Udacity%20Testing/Project2demonopcommerce/src/main/resources/features/F09_wishList.feature:15)
-]]></failure>
 </testcase>
 </testsuite>
